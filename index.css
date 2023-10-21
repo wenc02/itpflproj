@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+.header {
+    height: 11vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.burger {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.burger div {
+    background-color: black;
+    height: 8px;
+    border-radius: 10px;
+}
+.close {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-300px);
+}
+.close div {
+    background-color: black;
+    height: 8px;
+    border-radius: 10px;
+    width: 40px;
+    transform: rotate(40deg);
+}
+.close div:nth-child(2){
+    background-color: black;
+    height: 8px;
+    border-radius: 10px;
+    width: 40px;
+    position: absolute;
+    transform: rotate(-40deg);
+}
+.nav {
+    height: 100vh;
+    width: 20%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+}
+.nav .nav-header {
+    height: 11vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gold;
+}
+.nav .nav-links {
+    height: 88vh;
+    background-color: gold;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center;
+}
+.nav .nav-links ul li {
+    list-style: none;
+    padding: 15px;
+    margin: 10px 0px;text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.nav .nav-links button {
+    margin-top: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: black;
+    color: white;
+}
+.nav .nav-links button:hover {
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    box-shadow: 0px 0px 8px rgb(0, 0, 0.5);
+}
+.main {
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.main .table-wrapper {
+    width: 60%;
+}
+.main .table-wrapper h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+thead {
+    background-color: gold;
+    font-weight: bold;
+}
+table tbody {
+    font-weight: 100;
+}
+table tr td {
+    border-bottom: 1px solid gray;
+    padding: 9px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    thead {
+        background-color: gold;
+    }
+    .main .table-wrapper {
+        width: 80%;
+        overflow-x: scroll;
+    }
+    table tr td {
+        padding: 9px 50px;
+    }
+    
+}
+  
